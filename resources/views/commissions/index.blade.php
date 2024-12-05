@@ -20,7 +20,7 @@
             <td>{{ $commission->id }}</td>
             <td>{{ $commission->affiliate->name }}</td>
             <td>{{ $commission->valor }}</td>
-            <td>{{ $commission->data }}</td>
+            <td>{{ date("d/m/Y", strtotime($commission->data)) }}</td>
             <td>
                 <a href="{{ route('commissions.edit', $commission->id) }}" class="btn btn-sm btn-warning">Editar</a>
                 <form action="{{ route('commissions.destroy', $commission->id) }}" method="POST" style="display: inline-block;">

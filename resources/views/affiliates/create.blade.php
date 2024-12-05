@@ -11,7 +11,7 @@
     </div>
     <div class="mb-3">
         <label for="cpf" class="form-label">CPF</label>
-        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+        <input type="text" class="form-control" id="cpf" name="cpf" required>
     </div>
     <div class="mb-3">
         <label for="data_nascimento" class="form-label">Data de Nascimento</label>
@@ -23,7 +23,7 @@
     </div>
     <div class="mb-3">
         <label for="telefone" class="form-label">Telefone</label>
-        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="00 00000-0000" required>
+        <input type="text" class="form-control" id="telefone" name="telefone" required>
     </div>
     <div class="mb-3">
         <label for="endereco" class="form-label">Endereço</label>
@@ -72,7 +72,7 @@
                 $('#cidade').html('<option value="">Selecione uma cidade</option>');
             }
         });
-        $('#cpf').mask('000.000.000-00', { reverse: true });
-        $('#telefone').mask('00 00000-0000', { reverse: true });
+        $('#cpf').mask('00000000000', { reverse: true });
+        $('#telefone').mask('00000000000', { reverse: true });
     });
 </script>

@@ -13,7 +13,6 @@
             <th>Email</th>
             <th>Cidade</th>
             <th>Estado</th>
-            <th>Status</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -26,14 +25,8 @@
             <td>{{ $affiliate->email }}</td>
             <td>{{ $affiliate->estado }}</td>
             <td>{{ $affiliate->cidade }}</td>
-            <td>{{ $affiliate->active ? 'Ativo' : 'Inativo' }}</td>
             <td>
                 <a href="{{ route('affiliates.edit', $affiliate->id) }}" class="btn btn-sm btn-warning">Editar</a>
-                <form action="{{ route('affiliates.destroy', $affiliate->id) }}" method="POST" style="display: inline-block;">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-sm btn-danger" onclick="return confirm('Deseja inativar este afiliado?')">Inativar</button>
-                </form>
             </td>
         </tr>
         @endforeach

@@ -73,8 +73,8 @@
                 $('#cidade').html('<option value="">Selecione uma cidade</option>');
             }
         });
-        $('#cpf').mask('000.000.000-00', { reverse: true });
-        $('#telefone').mask('00 00000-0000', { reverse: true });
+        $('#cpf').mask('00000000000', { reverse: true });
+        $('#telefone').mask('00000000000', { reverse: true });
         $('#cidade').val({{ $affiliate->cidade }})
         $('#estado').val({{ $affiliate->estado }})
     });
