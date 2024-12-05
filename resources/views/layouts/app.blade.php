@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <img src="{{ asset("images/logo_realsBet.png") }}" style="width: 2%`; margin-right: 1%">
+            <img src="{{ asset("images/logo_realsBet.png") }}" style="width: 2%; margin-right: 1%">
             <a class="navbar-brand" href="#">RealsBet</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
