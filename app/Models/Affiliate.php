@@ -15,5 +15,6 @@ class Affiliate extends Model
         'endereco',
         'cidade',
         'estado',
+        'active',
     ];
 }

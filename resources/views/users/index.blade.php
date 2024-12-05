@@ -23,11 +23,18 @@
             <td>{{ $user->active ? 'Ativo' : 'Inativo' }}</td>
             <td>
                 <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-warning">Editar</a>
-                <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display: inline-block;">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-sm btn-danger" onclick="return confirm('Deseja inativar este usuário?')">Inativar</button>
-                </form>
+                @if($user->active)
+                    <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-sm btn-danger" onclick="return confirm('Deseja inativar este usuário?')">Inativar</button>
+                    </form>
+                @else
+                    <form action="{{ route('users.activate', $user->id) }}" method="POST" style="display: inline-block;">
+                        @csrf
+                        <button class="btn btn-sm btn-success" onclick="return confirm('Deseja ativar este usuário?')">Ativar</button>
+                    </form>
+                @endif
             </td>
         </tr>
         @endforeach

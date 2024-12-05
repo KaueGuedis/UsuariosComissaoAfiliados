@@ -64,4 +64,10 @@ class AffiliateController extends Controller
         $affiliate->update(['active' => false]);
         return redirect()->route('affiliates.index')->with('success', 'Afiliado inativado com sucesso!');
     }
+
+    public function activate(Affiliate $affiliate)
+    {
+        $affiliate->update(['active' => true]);
+        return redirect()->route('affiliates.index')->with('success', 'Afiliado ativado com sucesso!');
+    }
 }

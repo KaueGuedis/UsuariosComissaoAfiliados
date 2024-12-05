@@ -53,4 +53,10 @@ class UserController extends Controller
         $user->update(['active' => false]);
         return redirect()->route('users.index');
     }
+
+    public function activate(User $user)
+    {
+        $user->update(['active' => true]);
+        return redirect()->route('users.index')->with('success', 'Usuário ativado com sucesso!');
+    }
 }
